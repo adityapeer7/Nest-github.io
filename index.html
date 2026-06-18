@@ -1825,6 +1825,58 @@
       padding: 0 2rem;
     }
 
+    .gallery-mosaic{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:24px;
+
+margin-top:40px;
+
+}
+
+.gslot{
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.gslot:hover{
+
+transform:translateY(-6px);
+
+}
+
+.gslot img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+
+}
+
+.gslot-caption{
+
+text-align:center;
+
+font-weight:600;
+
+margin-top:12px;
+
+font-size:16px;
+
+}
+
     #glb-caption {
       position: absolute;
       bottom: 2rem;
@@ -3068,8 +3120,8 @@
 
 
   <!-- GALLERY -->
-  <section id="gallery" class="alt-bg gallery-section">
-    <!-- <div class="max-w">
+  <!-- <section id="gallery" class="alt-bg gallery-section">
+    <div class="max-w">
       <div class="section-header fade-up">
         <p class="section-tag">Life at NESt</p>
         <h2>Photo Gallery</h2>
@@ -3282,82 +3334,93 @@
         <span class="gctrl-sep">|</span>
         <button class="gctrl" id="gctrlNext" onclick="glbGoto((galleryRound+1)%galleryTotal)">Next &#8594;</button>
       </div>
-    </div> -->
+    </div>
+  </section> -->
+<!-- GALLERY -->
+<section id="gallery" class="alt-bg gallery-section">
+
+  <div class="max-w">
+
+    <div class="section-header fade-up">
+      <p class="section-tag">Life at NESt</p>
+
+      <h2>Photo Gallery</h2>
+
+      <p class="section-sub">
+        Conferences, industry visits, and research activities
+      </p>
+    </div>
+
     <div class="gallery-mosaic" id="galleryMosaic">
 
-      <!-- Google Networking Summit -->
-      <div class="gslot" data-slot="0" onclick="glbOpen(0)">
-        <div class="gslot-frame gf-active"
-             data-label="Google India Networking Research Summit 2026"
-             data-sublabel="Conference · Research Summit"
-             data-pidx="0">
-    
-          <img src="images/Google_Networking_summit.jpeg"
-               alt="Google India Networking Research Summit 2026"
-               style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
-        </div>
-    
+      <!-- Google Summit -->
+
+      <div class="gslot" onclick="glbOpen(0)">
+
+        <img src="images/Google_Networking_summit.jpeg"
+             alt="Google India Networking Research Summit 2026">
+
         <div class="gslot-caption">
-          <span>Google Networking Summit</span>
+
+          Google Networking Summit
+
         </div>
+
       </div>
-    
-    
+
+
       <!-- CoNEXT -->
-      <div class="gslot" data-slot="1" onclick="glbOpen(1)">
-        <div class="gslot-frame gf-active"
-             data-label="CoNEXT 2025"
-             data-sublabel="Conference · Paper Presentation"
-             data-pidx="1">
-    
-          <img src="images/CoNEXT_2025.jpeg"
-               alt="CoNEXT 2025"
-               style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
-        </div>
-    
+
+      <div class="gslot" onclick="glbOpen(1)">
+
+        <img src="images/CoNEXT_2025.jpeg"
+             alt="CoNEXT 2025">
+
         <div class="gslot-caption">
-          <span>CoNEXT 2025</span>
+
+          CoNEXT 2025
+
         </div>
+
       </div>
-    
-    
+
+
       <!-- Marvell -->
-      <div class="gslot" data-slot="2" onclick="glbOpen(2)">
-        <div class="gslot-frame gf-active"
-             data-label="Marvell 2025"
-             data-sublabel="Industry Visit · Collaboration"
-             data-pidx="2">
-    
-          <img src="images/Marvell_2025.jpeg"
-               alt="Marvell 2025"
-               style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
-        </div>
-    
+
+      <div class="gslot" onclick="glbOpen(2)">
+
+        <img src="images/Marvell_2025.jpeg"
+             alt="Marvell 2025">
+
         <div class="gslot-caption">
-          <span>Marvell 2025</span>
+
+          Marvell 2025
+
         </div>
+
       </div>
-    
-    
-      <!-- HIPC -->
-      <div class="gslot" data-slot="3" onclick="glbOpen(3)">
-        <div class="gslot-frame gf-active"
-             data-label="HiPC 2025"
-             data-sublabel="Conference · Research Presentation"
-             data-pidx="3">
-    
-          <img src="images/HIPC_2025.jpeg"
-               alt="HiPC 2025"
-               style="width:100%;height:100%;object-fit:cover;border-radius:6px;">
-        </div>
-    
+
+
+      <!-- HiPC -->
+
+      <div class="gslot" onclick="glbOpen(3)">
+
+        <img src="images/HIPC_2025.jpeg"
+             alt="HiPC 2025">
+
         <div class="gslot-caption">
-          <span>HiPC 2025</span>
+
+          HiPC 2025
+
         </div>
+
       </div>
-    
+
     </div>
-  </section>
+
+  </div>
+
+</section>
 
   <!-- LIGHTBOX -->
   <div id="glb" role="dialog" aria-modal="true">
@@ -3459,28 +3522,141 @@
 
 
     // ── Gallery cycling deck ──
-    var galleryRound = 0;
-    var galleryTotal = 2;   // 2 rounds of 6 photos each
-    var galleryPaused = false;
-    var galleryTimer = null;
-    var GALLERY_INTERVAL = 4000; // ms per round
+    // var galleryRound = 0;
+    // var galleryTotal = 2;   // 2 rounds of 6 photos each
+    // var galleryPaused = false;
+    // var galleryTimer = null;
+    // var GALLERY_INTERVAL = 4000; // ms per round
 
-    // All 12 photo entries (label, sublabel) — add real src strings here when available
-    var GALLERY_PHOTOS = [
-      { label: 'Lab Group Photo', sub: 'Annual Photo · NESt Lab', src: '' },
-      { label: 'SIGCOMM 2025', sub: 'Conference · Presentation', src: '' },
-      { label: 'Lab Meeting', sub: 'Weekly Research Sync', src: '' },
-      { label: 'CoNEXT 2024', sub: 'Paper Presentation', src: '' },
-      { label: 'Marvell Visit', sub: 'Industry Collaboration', src: '' },
-      { label: 'Best Thesis Award', sub: 'Aditya Peer · 14th Convocation', src: '' },
-      { label: 'SmartNIC Testbed', sub: 'Lab Infrastructure · P4', src: '' },
-      { label: 'IBM Research Visit', sub: 'OSCP Internship · 2024', src: '' },
-      { label: 'Dagstuhl Seminar 2023', sub: 'Programmable Host Networking', src: '' },
-      { label: 'P4 Workshop', sub: 'Hands-on Session', src: '' },
-      { label: 'Team Outing', sub: 'NESt Lab · 2024', src: '' },
-      { label: 'DSN 2025 Celebration', sub: 'Paper Accepted', src: '' },
-    ];
+    // // All 12 photo entries (label, sublabel) — add real src strings here when available
+    // var GALLERY_PHOTOS = [
+    //   { label: 'Lab Group Photo', sub: 'Annual Photo · NESt Lab', src: '' },
+    //   { label: 'SIGCOMM 2025', sub: 'Conference · Presentation', src: '' },
+    //   { label: 'Lab Meeting', sub: 'Weekly Research Sync', src: '' },
+    //   { label: 'CoNEXT 2024', sub: 'Paper Presentation', src: '' },
+    //   { label: 'Marvell Visit', sub: 'Industry Collaboration', src: '' },
+    //   { label: 'Best Thesis Award', sub: 'Aditya Peer · 14th Convocation', src: '' },
+    //   { label: 'SmartNIC Testbed', sub: 'Lab Infrastructure · P4', src: '' },
+    //   { label: 'IBM Research Visit', sub: 'OSCP Internship · 2024', src: '' },
+    //   { label: 'Dagstuhl Seminar 2023', sub: 'Programmable Host Networking', src: '' },
+    //   { label: 'P4 Workshop', sub: 'Hands-on Session', src: '' },
+    //   { label: 'Team Outing', sub: 'NESt Lab · 2024', src: '' },
+    //   { label: 'DSN 2025 Celebration', sub: 'Paper Accepted', src: '' },
+    // ];
 
+    const galleryPhotos = [
+
+{
+title:'Google India Networking Research Summit 2026',
+
+sub:'Conference · Research Summit',
+
+src:'images/Google_Networking_summit.jpeg'
+},
+
+{
+title:'CoNEXT 2025',
+
+sub:'Conference · Paper Presentation',
+
+src:'images/CoNEXT_2025.jpeg'
+},
+
+{
+title:'Marvell 2025',
+
+sub:'Industry Visit · Collaboration',
+
+src:'images/Marvell_2025.jpeg'
+},
+
+{
+title:'HiPC 2025',
+
+sub:'Conference · Research Presentation',
+
+src:'images/HIPC_2025.jpeg'
+}
+
+];
+
+var currentPhoto=0;
+
+function glbOpen(index){
+
+currentPhoto=index;
+
+renderLightbox();
+
+document.getElementById('glb').classList.add('open');
+
+document.body.style.overflow='hidden';
+
+}
+
+function glbClose(){
+
+document.getElementById('glb').classList.remove('open');
+
+document.body.style.overflow='';
+
+}
+
+function glbNav(direction){
+
+currentPhoto=
+
+(currentPhoto+direction+galleryPhotos.length)
+
+%galleryPhotos.length;
+
+renderLightbox();
+
+}
+
+function renderLightbox(){
+
+var photo=galleryPhotos[currentPhoto];
+
+document.getElementById('glb-content').innerHTML=
+
+'<img src="'+photo.src+'" style="max-width:90vw;max-height:80vh;">';
+
+document.getElementById('glb-caption').innerHTML=
+
+photo.title+' · '+photo.sub;
+
+}
+
+document.addEventListener('keydown',function(e){
+
+if(!document.getElementById('glb').classList.contains('open'))
+
+return;
+
+if(e.key==='Escape')
+
+glbClose();
+
+if(e.key==='ArrowLeft')
+
+glbNav(-1);
+
+if(e.key==='ArrowRight')
+
+glbNav(1);
+
+});
+
+document.getElementById('glb')
+
+.addEventListener('click',function(e){
+
+if(e.target===this)
+
+glbClose();
+
+});
     // Slot → which photo indices it cycles through
     var SLOT_PHOTOS = [
       [0, 6],
