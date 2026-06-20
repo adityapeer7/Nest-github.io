@@ -1931,6 +1931,7 @@
       <li><a href="#team" class="nav-link">Team</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#almuni" class="nav-link">Almuni</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
@@ -3344,19 +3345,17 @@
 
 
   <!-- ALUMNI -->
+<!-- ALUMNI -->
+
 <section id="alumni" class="alt-bg">
 
   <div class="max-w">
 
     <div class="section-header fade-up">
 
-      <p class="section-tag">
-        Past Members
-      </p>
+      <p class="section-tag">Past Members</p>
 
-      <h2>
-        Alumni
-      </h2>
+      <h2>Alumni</h2>
 
       <p class="section-sub">
 
@@ -3377,46 +3376,166 @@
 
       </h3>
 
-      <div class="alumni-scroll">
+      <div class="alumni-wrapper">
 
-        <!-- student cards here -->
-        <div class="student-card">
-          <div class="student-av" style="width:110px;height:110px;"><img src="images/Sayantan.jpeg" alt="Aditya Peer"
-              style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
-          <div>
-            <div class="student-name">Sayantan Dasgupta</div>
-            <div class="student-since">MTech &middot; May 2025</div>
-            <div class="student-links-row">
-              <a href="mailto:sayantan24161@iiitd.ac.in" class="slink" title="Email">&#9993;</a>
-              <a href="https://www.linkedin.com/in/dasguptas/" class="slink" title="LinkedIn" target="_blank"><i
-                class="fa-brands fa-linkedin"></i></a>
-              <a href="" class="slink" title="Website" target="_blank"><i
-                  class="fa-solid fa-globe"></i></a>
-              </div>
-          </div>
-        </div>
-        
-        <div class="student-card">
-          <div class="student-av" style="width:110px;height:110px;"><img src="images/Kushal.jpeg" alt="Aditya Peer"
-              style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
-          <div>
-            <div class="student-name">Kushal Mitra</div>
-            <div class="student-since">MTech &middot; May 2025</div>
-            <div class="student-links-row"><a href="mailto:kushal24151@iiitd.ac.in" class="slink"
-                title="Email">&#9993;</a>
-                <a href="" class="slink" title="LinkedIn"
-                target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="" class="slink" title="Website" target="_blank"><i
-                  class="fa-solid fa-globe"></i></a>
-              </div>
+        <button class="alumni-btn"
+
+          onclick="scrollAlumni('mtech',-1)">
+
+          &#10094;
+
+        </button>
+
+
+        <div class="alumni-scroll"
+
+          id="mtech">
+
+
+
+          <!-- STUDENT 1 -->
+
+          <div class="student-card">
+
+            <div class="student-av">
+
+              <img src="images/Sayantan.jpeg"
+
+                alt="Sayantan Dasgupta">
+
             </div>
+
+            <div>
+
+              <div class="student-name">
+
+                Sayantan Dasgupta
+
+              </div>
+
+              <div class="student-since">
+
+                MTech &middot; May 2025
+
+              </div>
+
+              <div class="student-links-row">
+                <a href="mailto:sayantan24161@iiitd.ac.in"
+                  class="slink"
+                  title="Email">
+
+                  &#9993;
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/dasguptas/"
+
+                  class="slink"
+
+                  target="_blank">
+
+                  <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+                <a href=""
+
+                  class="slink"
+
+                  target="_blank">
+
+                  <i class="fa-solid fa-globe"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- STUDENT 2 -->
+
+          <div class="student-card">
+
+            <div class="student-av">
+
+              <img src="images/Kushal.jpeg"
+
+                alt="Kushal Mitra">
+
+            </div>
+
+            <div>
+
+              <div class="student-name">
+
+                Kushal Mitra
+
+              </div>
+
+              <div class="student-since">
+
+                MTech &middot; May 2025
+
+              </div>
+
+              <div class="student-links-row">
+
+                <a href="mailto:kushal24151@iiitd.ac.in"
+
+                  class="slink">
+
+                  &#9993;
+
+                </a>
+
+                <a href=""
+
+                  class="slink"
+
+                  target="_blank">
+
+                  <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+                <a href=""
+
+                  class="slink"
+
+                  target="_blank">
+
+                  <i class="fa-solid fa-globe"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ADD MORE STUDENTS HERE -->
+
+
         </div>
-        
-      </div>
 
 
+        <button class="alumni-btn"
+
+          onclick="scrollAlumni('mtech',1)">
+
+          &#10095;
+
+        </button>
+
       </div>
+
     </div>
+
 
 
     <!-- BTech -->
@@ -3429,13 +3548,36 @@
 
       </h3>
 
-      <div class="alumni-scroll">
+      <div class="alumni-wrapper">
 
-        <!-- student cards here -->
+        <button class="alumni-btn"
+
+          onclick="scrollAlumni('btech',-1)">
+
+          &#10094;
+
+        </button>
+
+        <div class="alumni-scroll"
+
+          id="btech">
+
+          <!-- Add BTech students -->
+
+        </div>
+
+        <button class="alumni-btn"
+
+          onclick="scrollAlumni('btech',1)">
+
+          &#10095;
+
+        </button>
 
       </div>
 
     </div>
+
 
   </div>
 
