@@ -3905,6 +3905,23 @@ box-shadow:0 4px 10px rgba(0,0,0,.1);
       });
     }, { passive: true });
 
+    function scrollAlumni(id,direction){
+
+    const container = document.getElementById(id);
+
+    const card = container.querySelector('.student-card');
+
+    const distance = card.offsetWidth + 24;
+
+    container.scrollBy({
+
+      left: direction * distance,
+
+      behavior: 'smooth'
+
+    });
+
+}
   </script>
 </body>
 
